@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="4"
+    name="MVP Fragment"
+    minApi="14"
+    minBuildApi="14"
+    description="Creates a new MVP Fragment">
+
+    <category value="Fragment" />
+    <formfactor value="Mobile" />
+	
+	<parameter
+        id="mvpName"
+        name="MVP Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="MVP"
+        help="The name of the MVP files to create" />
+		
+    <parameter
+        id="generateFragment"
+        name="Generate Fragment File"
+        type="boolean"
+        default="true"
+        help="If true, a Fragment file will be generated" />		
+		
+    <parameter
+        id="fragmentClass"
+        name="Fragment Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${layoutToFragment(mvpName)}"
+        default="MainFragment"
+		visibility="generateFragment"
+        help="The name of the fragment class to create" />
+
+    <parameter
+        id="generateLayout"
+        name="Generate Layout File"
+        type="boolean"
+        default="true"
+        help="If true, a layout file will be generated" />
+
+    <parameter
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${fragmentToLayout(fragmentClass)}"
+        default="fragment_main"
+        visibility="generateLayout"
+        help="The name of the layout to create for the fragment" />
+
+    <parameter
+        id="needRequestMap"
+        name="Request params Map"
+        type="boolean"
+        default="true"
+        help="If true, request params map will be added otherwise empty" />
+		
+    <parameter
+        id="userObjectAsResponse"
+        name="Use object as response params"
+        type="boolean"
+        default="false"
+        help="If true, response params object will be added otherwise ${mvpName}Response" />
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_blank_activity.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>

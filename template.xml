@@ -18,6 +18,13 @@
         default="MVP"
         help="The name of the MVP files to create" />
 		
+	<parameter
+        id="describe"
+        name="MVP function's description"
+        type="string"
+        default="MVP"
+        help="MVP function's description" />
+		
     <parameter
         id="generateFragment"
         name="Generate Fragment File"

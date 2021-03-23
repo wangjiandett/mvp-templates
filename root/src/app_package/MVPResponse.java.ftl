@@ -1,7 +1,7 @@
 package ${packageName}.mvp.bean;
 
 /**
- * ${mvpName}Response
+ * ${describe}Response
  *
  * @author wangjian
  * Created on 2020/12/23 9:54

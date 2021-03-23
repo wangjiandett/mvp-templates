@@ -9,7 +9,7 @@ import ${packageName}.mvp.contract.${mvpName}Contract;
 import java.util.Map;
 
 /**
- * ${mvpName}Presenter
+ * ${describe}Presenter
  * <p>
  * Created by：wangjian on 2017/12/21 15:45
  */
@@ -32,8 +32,8 @@ public class ${mvpName}Presenter implements ${mvpName}Contract.I${mvpName}Presen
             }
 
             @Override
-            public void onFail(String msg) {
-                i${mvpName}View.onFail(msg);
+            public void onFail(int code, String msg) {
+                i${mvpName}View.onFail(code, msg);
             }
         });
     }

@@ -9,7 +9,7 @@ import ${packageName}.net.ApiCreator
 import ${packageName}.net.AppModel
 
 /**
- * ${mvpName}Model
+ * ${describe}Model
  *
  * Created by：wangjian on 2017/12/21 11:00
  */
@@ -32,7 +32,7 @@ class ${mvpName}Model : AppModel<<#if userObjectAsResponse>Any<#else>${mvpName}R
         mCallback.onSuccess(value)
     }
 
-    override fun onFail(msg: String) {
-        mCallback.onFail(msg)
+    override fun onFail(code: Int, msg: String) {
+        mCallback.onFail(code, msg)
     }
 }

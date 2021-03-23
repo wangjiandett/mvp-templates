@@ -6,7 +6,7 @@ import ${packageName}.mvp.bean.${mvpName}Response
 </#if>
 
 /**
- * ${mvpName}Contract
+ * ${describe}Contract
  *
  * @author wangjian
  * Created on 2020/9/30 17:12
@@ -22,6 +22,6 @@ interface ${mvpName}Contract {
 
     interface I${mvpName}View {
         fun on${mvpName}Success(response: <#if userObjectAsResponse>Any<#else>${mvpName}Response</#if>?)
-        fun onFail(msg: String?)
+        fun onFail(code: Int, msg: String?)
     }
 }

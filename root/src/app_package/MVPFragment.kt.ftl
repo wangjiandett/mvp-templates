@@ -11,7 +11,7 @@ import ${packageName}.mvp.model.${mvpName}Model
 import ${packageName}.mvp.presenter.${mvpName}Presenter
 
 /**
- * ${fragmentClass}
+ * ${describe}Fragment
  *
  * @author wangjian
  * Created on 2020/12/23 9:54
@@ -50,7 +50,7 @@ class ${fragmentClass} : BaseFragment(), ${mvpName}Contract.I${mvpName}View {
 		initViewWithData(response)
     }
 
-    override fun onFail(msg: String?) {
+    override fun onFail(code: Int, msg: String?) {
         showToast(msg)
     }
 	

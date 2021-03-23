@@ -11,7 +11,7 @@ import ${packageName}.net.AppModel;
 import java.util.Map;
 
 /**
- * ${mvpName}Model
+ * ${describe}Model
  * <p>
  * Created by：wangjian on 2017/12/21 11:00
  */
@@ -29,8 +29,8 @@ public class ${mvpName}Model extends AppModel<<#if userObjectAsResponse>Object<#
     }
 
     @Override
-    protected void onFail(String msg) {
-        mCallback.onFail(msg);
+    protected void onFail(int code, String msg) {
+        mCallback.onFail(code, msg);
     }
 
 }

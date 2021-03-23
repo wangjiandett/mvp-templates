@@ -7,7 +7,7 @@ import ${packageName}.mvp.bean.${mvpName}Response
 import ${packageName}.mvp.contract.${mvpName}Contract;
 
 /**
- * ${mvpName}Presenter
+ * ${describe}Presenter
  *
  * @author wangjian
  * Created on 2020/9/30 17:12
@@ -20,8 +20,8 @@ class ${mvpName}Presenter(private val iView: ${mvpName}Contract.I${mvpName}View,
                 iView.on${mvpName}Success(response)
             }
 
-            override fun onFail(msg: String) {
-                iView.onFail(msg)
+            override fun onFail(code: Int, msg: String) {
+                iView.onFail(code, msg)
             }
         })
     }

@@ -8,7 +8,7 @@ import ${packageName}.mvp.bean.${mvpName}Response
 import java.util.Map;
 
 /**
- * ${mvpName}Contract
+ * ${describe}Contract
  *
  * @author wangjian
  * Created on 2020/9/30 17:12
@@ -25,6 +25,6 @@ public interface ${mvpName}Contract {
     
     interface I${mvpName}View{
         void on${mvpName}Success(<#if userObjectAsResponse>Object<#else>${mvpName}Response</#if> response);
-        void onFail(String msg);
+        void onFail(int code, String msg);
     }
 }

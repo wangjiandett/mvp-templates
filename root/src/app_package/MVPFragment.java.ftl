@@ -15,7 +15,7 @@ import ${packageName}.mvp.presenter.${mvpName}Presenter;
 import java.util.HashMap;
 
 /**
- * ${fragmentClass}
+ * ${describe}Fragment
  *
  * @author wangjian
  * Created on 2020/12/23 9:54
@@ -59,7 +59,7 @@ public class ${fragmentClass} extends BaseFragment implements ${mvpName}Contract
     }
 
     @Override
-    public void onFail(String msg) {
+    public void onFail(int code, String msg) {
         showToast(msg);
     }
 	

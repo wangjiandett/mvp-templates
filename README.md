@@ -8,4 +8,5 @@ android-studio4.0.2\android-studio\plugins\android\lib\templates\fragments\MVPFr
 模板代码依赖项目 https://github.com/wangjiandett/TTDemo 编写，仅供参考
 
 android studio  4.1之后删除了template文件夹无法使用这种方式了生成模板，需要使用idea插件方式来做
+
 android studio4.1 template 参考 https://github.com/wangjiandett/MVP-Template
